@@ -1,0 +1,12 @@
+[Unit]
+Description=emoji-stream
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+WorkingDirectory=/root/data/emoji-stream
+ExecStart=/root/data/emoji-stream/emoji-stream -httpaddr localhost:8083 -emoji :ghost:
+
+[Install]
+WantedBy=multi-user.target
